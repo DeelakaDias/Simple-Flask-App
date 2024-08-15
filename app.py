@@ -29,7 +29,6 @@ def index():
             db.session.add(new_task)
             db.session.commit()
             return redirect('/')
-            # return redirect(url_for('index'))
         
         except:
             return 'There was an issue adding your task'
