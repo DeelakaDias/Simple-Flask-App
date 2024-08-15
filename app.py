@@ -1,6 +1,5 @@
-from flask import Flask, render_template, url_for
-from flask_sqlalchemy import SQLAlchemy
-#from app import app, db 
+from flask import Flask, request, render_template, redirect, url_for, request
+from flask_sqlalchemy import SQLAlchemy 
 from datetime import datetime
 
 app = Flask(__name__)
@@ -18,7 +17,12 @@ class Todo(db.Model):
     def __repr__(self):
         return '<Task %r>' % self.id
 
-@app.route('/')
+@app.route('/', methods = ["POST", "GET"])
+def index():
+    if request.method == "POST":
+        pass
+    else:
+        pass
 
 def index():
     return render_template("index.html")
