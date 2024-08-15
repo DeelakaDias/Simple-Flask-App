@@ -22,7 +22,19 @@ def index():
     if request.method == "POST":
         # content refers to content in index.html
         task_content = request.form['content']
+        new_task = Todo(content = task_content)
+        # return 'There was an issue adding your task'
+
+        try:
+            db.session.add(new_task)
+            db.session.commit()
+            return redirect
+        
+        except:
+            return 'There was an issue adding your task'
+        
     else:
+        tasks = Todo.query.order_by(Todo.data_created).all()
         return render_template('index.html')
 
 if __name__ == "__main__":
