@@ -1,9 +1,28 @@
 body {
-    background-image: url('../images/backiee-232677-landscape.jpg');
+    background-image: url('../images/porsch\ -landscape.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     margin: 0;
     font-family: sans-serif;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    z-index: -1; /* Place the video behind other content */
+}
+
+th {
+    color: #ffbb00;
+}
+
+td {
+    color: #be1a6c; 
+    font-weight: bold;
 }
