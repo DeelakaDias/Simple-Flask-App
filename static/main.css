@@ -1,4 +1,9 @@
 body {
+    background-image: url('images/backiee-232677-landscape.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
     margin: 0;
     font-family: sans-serif;
 }
