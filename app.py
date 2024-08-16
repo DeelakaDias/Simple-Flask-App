@@ -23,8 +23,6 @@ def index():
         # content refers to content in index.html
         task_content = request.form['content']
         new_task = Todo(content = task_content)
-        print(task_content)
-        return 'There was an issue adding your task'
 
         try:
             db.session.add(new_task)
@@ -35,9 +33,6 @@ def index():
         
     else:
         tasks = Todo.query.order_by(Todo.data_created).all()
-        for task in tasks:
-            print(vars(task))
-        print("This is tasks", tasks)
         return render_template('index.html',tasks=tasks)
         # return render_template('index.html')
 
